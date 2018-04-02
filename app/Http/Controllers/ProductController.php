@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index() {
-
-        return view('shops.index');
+        $products = Product::all();
+        return view('shops.index', ['products' => $products]);
     }
 }
