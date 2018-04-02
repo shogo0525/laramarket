@@ -10,7 +10,10 @@
   <body>
     <div id="app">
       @include('partials.header')
-      @yield('content')
+      
+      <div class="container">
+          @yield('content')
+      </div>
     </div>
   </body>
 </html>
