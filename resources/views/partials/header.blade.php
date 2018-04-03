@@ -19,7 +19,7 @@
         <a class="navbar-link" href="#">User Management</a>
         <div class="navbar-dropdown is-boxed">
           <a class="navbar-item" href="{{ route('user.signup') }}">Signup</a>
-          <a class="navbar-item" href="#">Signin</a>
+          <a class="navbar-item" href="{{ route('user.signin') }}">Signin</a>
           <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
             Modifiers
           </a>
