@@ -18,11 +18,13 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link" href="#">User Management</a>
         <div class="navbar-dropdown is-boxed">
-          <a class="navbar-item" href="{{ route('user.signup') }}">Signup</a>
-          <a class="navbar-item" href="{{ route('user.signin') }}">Signin</a>
-          <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
-            Modifiers
-          </a>
+          @if(Auth::check())
+            <a class="navbar-item" href="{{ route('user.profile') }}">Profile</a>
+            <a class="navbar-item" href="{{ route('user.logout') }}">Logout</a>
+          @else
+            <a class="navbar-item" href="{{ route('user.signup') }}">Signup</a>
+            <a class="navbar-item" href="{{ route('login') }}">Login</a>
+          @endif
         </div>
       </div>
     </div>

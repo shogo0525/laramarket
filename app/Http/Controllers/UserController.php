@@ -24,14 +24,16 @@ class UserController extends Controller
         ]);
         $user->save();
 
-        return redirect()->route('product.index');
+        Auth::login($user);
+
+        return redirect()->route('user.profile');
     }
 
-    public function signin() {
-        return view('user.signin');
+    public function login() {
+        return view('user.login');
     }
 
-    public function postSignin(Request $request) {
+    public function postLogin(Request $request) {
         $this->validate($request, [
             'email' => 'email|required|',
             'password' => 'required|min:6'
@@ -53,5 +55,9 @@ class UserController extends Controller
         return view('user.profile');
     }
 
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('product.index');
+    }
 
 }
