@@ -14,6 +14,7 @@
     <div class="navbar-end">
       <a class="navbar-item" href="https://bulma.io/">
         Shopping Cart
+        <span>（{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}）</span>
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link" href="#">User Management</a>
