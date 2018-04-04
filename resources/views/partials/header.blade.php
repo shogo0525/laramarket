@@ -12,7 +12,7 @@
 
   <div id="navbarExampleTransparentExample" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item" href="https://bulma.io/">
+      <a class="navbar-item" href="{{ route('product.shoppingCart') }}">
         Shopping Cart
         <span>（{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}）</span>
       </a>
