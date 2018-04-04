@@ -25,7 +25,7 @@
           </div>
           <footer class="card-footer">
             <p class="card-footer-item">{{ $product->price }}</p>
-            <a href="#" class="card-footer-item">Add to Cart</a>
+            <a href="{{ route('product.addToCart', ['id' => $product->id ]) }}" class="card-footer-item">Add to Cart</a>
           </footer>
         </div>
       </div>
